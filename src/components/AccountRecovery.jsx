@@ -12,18 +12,14 @@ const AccountRecovery = () => {
 
     const handlePasswordReset = (e) => {
         const password = e.target[0].value
-        console.log(e)
-        console.log(password)
 
         e.preventDefault()
         passwordResetService.recoverPassword(userId, tokenStr, password)
             .then((response) => {
                 toast.success(response.data.message)
-                 console.log(response.data.message)
                  e.target[0].value = ""
             }).catch(error => {
                 toast.error(error.response.data.error)
-                console.log(error.response.data.error)
             })
     }
 
