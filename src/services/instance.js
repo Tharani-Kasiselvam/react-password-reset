@@ -1,7 +1,7 @@
 import axios from "axios"
 
 //define baseURL for the API
-const baseURL = "http://localhost:5001"
+const baseURL = "https://node-password-reset-tjd6.onrender.com"
 
 //create an axios instance
 const instance = axios.create({
